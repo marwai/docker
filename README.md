@@ -36,11 +36,12 @@
 
 ##### 3) Next use the following command. This works in a similar way to git add .
 
-```docker tag 4bb46517cac3 danteegan/daniel-teegan-eng-67:First_commit_docker (Use image ID not container ID)```
+```docker tag 4bb46517cac3 mark5670/eng67.man-wai.docker.repo
+```
 
 ##### 4) Now to push we use the following command. It is docker push then your docker account name followed by the repo you want to push too
 
-```docker push danteegan/daniel-teegan-eng-67```
+```docker push mark5670/eng67.man-wai.docker.repo```
 
 ##### 5) Your image sould now be pushed onto docker!!
 

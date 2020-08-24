@@ -1,0 +1,6 @@
+app/ 
+Dockerfile.txt
+Setup/
+Terraform.md
+vagrantfile
+.vagrant
