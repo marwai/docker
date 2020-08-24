@@ -1,5 +1,8 @@
 # Docker
 
+## Pushing to Docker 
+![pushing to docker](pushing to docker.gif)
+__Instructions are below__
 
 ## What is containerisation?
 - Packing up software code and all its dependencies (node package manager, programming languages) so that it can run uniformly and consistently on any infrastructure or operating system.
@@ -24,7 +27,7 @@
 ```Virtualization``` enables you to run multiple operating systems on the hardware of a single physical server.
 ```Containerisation``` enables you to deploy multiple applications using the same operating system on a single virtual machine or server. 
 
-### Pushing to Docker
+# Pushing to Docker
 
 ##### 1) Log into your Docker account using the following command:
 
