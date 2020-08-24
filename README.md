@@ -1,7 +1,7 @@
 # Docker
 
 ## Pushing to Docker 
-![pushing to docker](pushing to docker.gif)
+![pushing to docker](images/pushing_to_docker.gif)
 __Instructions are below__
 
 ## What is containerisation?

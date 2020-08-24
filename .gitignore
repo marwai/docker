@@ -4,3 +4,4 @@ Setup/
 Terraform.md
 vagrantfile
 .vagrant
+.idea/
