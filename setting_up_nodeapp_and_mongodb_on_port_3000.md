@@ -1,3 +1,4 @@
+# A working gif, be patient, it takes a while :) 
 ![WORKING_EXERCISE_YESS](images/mongodb_on_port_3000_in_docker.gif)
 
 # Exercise
