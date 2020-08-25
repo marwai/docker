@@ -59,7 +59,7 @@ docker tag 4bb46517cac3 mark5670/eng67.man-wai.docker.repo
 
 ##### 1) To pull a repo from docker use the following command
 
-``` docker run -d -p 90:80 bariallali/bari-docker-eng67:Second_commit_adding_nginx_image ```
+``` docker run -d -p 90:80 mark5670/eng67.man-wai.docker:Second_commit_adding_nginx_image ```
 
 ##### When pulled on your local host port 90 It should show the image in this case nginx
 
@@ -72,4 +72,6 @@ Docker pull – to pull the image from docker hub
 Docker run – to run the image live directly from dockerhub
 
 ```
+
+# COMPLETED TASK 
 
