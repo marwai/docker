@@ -14,7 +14,7 @@ Docker is an open source platform for containerisation.
 ![vms and docker](images/vms_docker.png)
 
 ## Process
-![docker process](images/docker_process.png)
+![docker process](images/docker_process.svg)
 
 # Why/Benefit?
 - Fast consistent delivery of your application 
