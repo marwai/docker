@@ -1,0 +1,114 @@
+
+# Looks running containers
+docker ps
+
+# Select nginx tag
+6aaeee2a770c
+
+# run this in linux
+docker exec -it 6aaeee2a770c sh
+
+# go into folder
+ cd /usr/share/nginx/html
+
+# ls - looking for index.html
+# 50x.html index.html
+# Here is the default location for index.html
+
+
+# Instructions
+# cp os to docker index.html from the location where you extracted the index.html file
+# docker cp location_of_index.html container_id:
+docker cp ~/DevOps/code/app1/static-website-example/index.html 6aaeee2a770c:/usr/share/nginx/html
+
+## commit the container ID
+docker commit 6aaeee2a770c mark5670/eng67.man-wai.docker.repo:image_solution
+
+# push
+git push mark5670/eng67.man-wai.docker.repo
+
+
+
+Past container ID
+- d4f5b33bd501
+- 5539deab9f3a
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: error: IPv6 listen already enabled
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET / HTTP/1.1" 200 14522 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:54 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:55 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:55 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:03:55 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:04:14 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:19 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:05:22 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:47:17 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:28 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:29 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /images/pic01.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/css/main.css HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /images/pic02.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/jquery.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /images/pic03.jpg HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/skel.min.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/util.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
+172.17.0.1 - - [25/Aug/2020:12:55:30 +0000] "GET /assets/js/main.js HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" "-"
