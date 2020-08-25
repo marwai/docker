@@ -1,15 +1,21 @@
 # Docker
 
+## What is Docker?
+Docker is an open source platform for containerisation.
+
+
+## Difference?
+- Docker is lightweight compared to VMs
+- Docker shares the resource of an OS than creating an entire virtual environment
+
 ## Pushing to Docker 
 ![pushing to docker](images/pushing_to_docker.gif)
 __Instructions are below__
 
 ## What is containerisation?
-- Packing up software code and all its dependencies (node package manager, programming languages) so that it can run uniformly and consistently on any infrastructure or operating system.
-- Containerisation allows developers to create and deploy applications faster and securely.
-- A container is a uniform structure in which any application can be stored, transported and run. It is named for and often compared to the standardised intermodal containers used in the shipping industry for efficient transportation.
-- In the software world, containerisation is an efficient method for deploying applications. A container encapsulates an application with its own operating environment. 
-- It can be placed on any host machine without special configuration, removing the issue of dependencies.
+Containerization involves bundling an application together with all of its related configuration files, libraries and dependencies required for it to run in an efficient and bug-free way across different 
+computing environments.
+
 
 ## Devops and Containerisation 
 - Containerisation is key to reducing bottlenecks in the software pipeline.
