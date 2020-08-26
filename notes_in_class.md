@@ -27,21 +27,26 @@ is a lightweight, standalone, executable package of software that includes every
 # Who is using docker?
 - Multi-billionaire companies 
 
-'''
-# Looks running containers 
+
+Looks running containers 
+```
 docker ps 
-
+```
 # Select nginx tag
+```
 6aaeee2a770c 
-
+```
 # run this in linux 
+```
 docker exec -it 6aaeee2a770c sh
-
+```
 # go into folder
- cd /usr/share/nginx/html
-
+```
+cd /usr/share/nginx/html
+```
+```
 # ls - looking for index.html 
-#50x.html index.html
+# 50x.html index.html
 # Here is the default location for index.html
 ```
 ____
@@ -58,16 +63,21 @@ docker logs container - live logs
 docker logs 5539deab9f3a >> nginx_logs.txt
 
 ____
+```
 # Docker language to copy app, running go
 - automated nginx 
 ```
-# "'" pick file from current dir 
+
+"'" pick file from current dir 
+```
 docker build -t mark5670/nginx-app:first_app .
-
-# makes a new repo 
+```
+makes a new repo 
+```
 docker push mark5670/nginx-app:first_app 
-
-# enter the linux env
+```
+enter the linux env
+```
 docker exec -it 5539deab9f3a sh
 
 apt-get update 

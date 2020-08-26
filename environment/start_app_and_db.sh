@@ -3,8 +3,6 @@
 # runs docker-compose up -detached
 docker-compose up -d
 
-#winpty
-
 
 # Exec goes into the container ID and run command
 # docker ps -l give us the most recent container
