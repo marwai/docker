@@ -2,8 +2,12 @@ version: '3'
 services:
   db:
     image: mongo
+    # volumes: 
+    # environment/db/mongod.conf:/etc/mongod.conf
+    # ./db:/var/lib/mongodb
     restart: always
     ports: [27017:27017]
+
   web:
     # Build the dockerfile in the app
     build: ./app

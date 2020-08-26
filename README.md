@@ -33,31 +33,67 @@ computing environments.
 ```Virtualization``` enables you to run multiple operating systems on the hardware of a single physical server.
 ```Containerisation``` enables you to deploy multiple applications using the same operating system on a single virtual machine or server. 
 
+
+## Monolithic Architecture
+
+### - A monolithic architecture is the traditional unified model for the design of a software program.
+
+### - Monolithic software is designed to be self-contained; components of the program are interconnected and interdependent rather than loosely coupled
+
+
+## What is microservices
+
+- What sets a microservices architecture apart from more traditional, monolithic approaches is how it breaks an app down into its core functions. Each function is called a service, and can be built and deployed independently, meaning individual services can function without negatively affecting the others. This helps to make constant iteration and delivery (CI/CD) more seamless and achievable.
+
+![monolithics_vs_microservices](/images/monolithic-vs-microservices.png)
+
+### - A lefthand side bar could represent a service, meanining we can easily make changes to it without affecting other parts of the website
+
+### - Microservices is all about breaking down apps into their core functions which can communicate to eachother through API calls
+- 
+
+### Advantages of Microservices
+
+- **Scalability**: Since the services are seperate, we can easily scale the most needed services when necessary as opposed to scaling the whole application, thus improving cost savings
+
+- **Faster Deplyoments**: Smaller codebases allows for quicker deployments and thus improving the efficiency of the CI/CD pipeline. Leading to greater customer satisfaction
+
+- **More technological flexibility**: Smaller services means that you can try out new tools on an individual service without it affecting the rest of the application, this means organisations can experiment between more efficient tools 
+
+
+### Disadvantages of Microservices
+
+- **May not be benefifial for small businesses**: Microservices can be difficult to implement for smaller business who don't want to be bogged down in complex orchestration between all the services
+
+- **Global Testing can be more difficult**: In microservices architecture it can difficult to test that all the services are running in complete synchronisation as opposed to a Monolithic archtecture which uses a WAR container
+
+
+
 # Pushing to Docker
 
-##### 1) Log into your Docker account using the following command:
+1) Log into your Docker account using the following command:
 
 ```docker login```
 
-##### 2) View the Images available by typing, The image I copyed was for nginx. 
+2) View the Images available by typing, The image I copyed was for nginx. 
 
 ```docker images```
 
-##### 3) Next use the following command. This works in a similar way to git add .
+3) Next use the following command. This works in a similar way to git add .
 
 ```
 docker tag 4bb46517cac3 mark5670/eng67.man-wai.docker.repo
 ```
 
-##### 4) Now to push we use the following command. It is docker push then your docker account name followed by the repo you want to push too
+4) Now to push we use the following command. It is docker push then your docker account name followed by the repo you want to push too
 
 ```docker push mark5670/eng67.man-wai.docker.repo```
 
-##### 5) Your image sould now be pushed onto docker!!
+5) Your image sould now be pushed onto docker!!
 
 ### Pulling from Docker
 
-##### 1) To pull a repo from docker use the following command
+1) To pull a repo from docker use the following command
 
 ``` docker run -d -p 90:80 mark5670/eng67.man-wai.docker:Second_commit_adding_nginx_image ```
 
