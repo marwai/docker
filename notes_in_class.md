@@ -52,8 +52,8 @@ cd /usr/share/nginx/html
 ____
 
 # Exercise - cp os to docker index.html
-docker cp ~/DevOps/code/app1/static-website-example/index.html 5539deab9f3a:/usr/share/nginx/html
-docker cp ~/DevOps/code/app1/static-website-example/assets 5539deab9f3a:/usr/share/nginx/html
+docker cp ~/DevOps/code/app1/static-website-example/index.html 5539deab9f3a:/usr/share/nginx/html     
+docker cp ~/DevOps/code/app1/static-website-example/assets 5539deab9f3a:/usr/share/nginx/html       
 docker cp ~/DevOps/code/app1/static-website-example/images 5539deab9f3a:/usr/share/nginx/html
 '''
  
